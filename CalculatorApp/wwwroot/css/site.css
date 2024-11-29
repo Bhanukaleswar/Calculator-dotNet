@@ -1,0 +1,57 @@
+/* Existing styles in site.css */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* New styles to append */
+
+/* Background for body */
+body {
+    background-color: #f0f4f8; /* Light background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hover effects for inputs, selects, and buttons */
+input:hover, select:hover, button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    transition: transform 0.3s;
+}
+
+button:hover {
+    background-color: #148e49; /* Darker green on hover */
+}
+
+/* Fade-in animation for results */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for result display */
+p[style*="animation"] {
+    animation: fadeIn 1s ease-in-out;
+}
+

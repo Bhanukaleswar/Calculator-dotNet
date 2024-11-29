@@ -1,0 +1,46 @@
+@page
+@model CalculatorApp.Pages.IndexModel
+
+<h1 style="font-size: 3rem; font-weight: bold; color: #1db954; text-shadow: 2px 2px #0e0e0e;">
+    Bhanu Kaleswar's Calculator
+</h1>
+<p style="font-size: 1.5rem; color: #cccccc; margin-bottom: 30px;">built with .NET</p>
+
+<form method="post" style="background: linear-gradient(135deg, #e0f7fa, #e0ffff); padding: 20px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);">
+    <div style="margin-bottom: 15px;">
+        <label for="num1" style="font-size: 1.2rem;">First Number:</label>
+        <input type="number" name="num1" id="num1" required 
+               style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 8px; border: none; background-color: #ffffff; color: #333333; transition: transform 0.3s;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="num2" style="font-size: 1.2rem;">Second Number:</label>
+        <input type="number" name="num2" id="num2" required 
+               style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 8px; border: none; background-color: #ffffff; color: #333333; transition: transform 0.3s;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="operation" style="font-size: 1.2rem;">Operation:</label>
+        <select name="operation" id="operation" 
+                style="width: 100%; padding: 10px; font-size: 1rem; border-radius: 8px; border: none; background-color: #ffffff; color: #333333; transition: transform 0.3s;">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+    </div>
+
+    <button type="submit" 
+            style="width: 100%; padding: 12px; font-size: 1.2rem; border-radius: 8px; border: none; background-color: #1db954; color: #ffffff; cursor: pointer; transition: background-color 0.3s, transform 0.3s;">
+        Calculate
+    </button>
+</form>
+
+@if (ViewData["Result"] != null)
+{
+    <p style="font-size: 1.5rem; color: #1db954; margin-top: 20px; animation: fadeIn 1s ease-in-out;">@ViewData["Result"]</p>
+}
+
+<!-- Link to the external CSS file -->
+<link rel="stylesheet" href="~/css/site.css" />
+
