@@ -55,3 +55,18 @@ p[style*="animation"] {
     animation: fadeIn 1s ease-in-out;
 }
 
+/* Style the warning message */
+.warning-message {
+    background-color: #f9f3f3; /* Light red background */
+    padding: 10px;
+    border-left: 5px solid #e74c3c; /* Red border */
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.warning-message p {
+    font-size: 1.1em;
+    color: #e74c3c; /* Red text color */
+    font-weight: bold;
+}
+
